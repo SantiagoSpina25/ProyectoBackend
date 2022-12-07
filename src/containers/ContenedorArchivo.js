@@ -47,22 +47,16 @@ class ContenedorArchivo {
     }
 
 
-    async update(object,id) {
+    async update (productModify, index){
         try {
             const read = await fs.readFile(this.path, "utf-8")
-            const data =  JSON.parse(read)
+            let data = JSON.parse(read)
 
-            let objFind = data.find(obj => obj.id === id)  
-
-            const objFilter = data.filter(prod => prod.id != id)
-            fs.writeFile(this.path, JSON.stringify(objFilter), "utf-8")
-
-            objFind = {...object, id}
-            data.push(objFind)
-            fs.writeFile(this.path, JSON.stringify(data), "utf-8")
-        }
-        catch (error) {
-            console.log(error)
+            data[index] = productModify
+            await fs.writeFile(this.path, JSON.stringify(data, null, 2), "utf-8")
+        } catch (error) {
+            const errorMsg = 'no se pudo actualizar el objeto'
+            return errorMsg
         }
     }
 

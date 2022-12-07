@@ -67,12 +67,21 @@ productosRouter.post('/', soloAdmins, async (req, res) => {
 
 productosRouter.put('/:id', soloAdmins, async (req, res) => {
     const { name, price, thumbnail, category, stock } = req.body
-    const productoActualizado = {name: name, price: price, thumbnail: thumbnail, category: category, stock: stock}
-
     const id = Number(req.params.id)
-    ProductService.update(productoActualizado, id)
+    const producto = {name: name, price: price, thumbnail: thumbnail, category: category, stock: stock}
 
-    res.json("Producto actualizado con exito")
+    ProductService.getAll().then(newProductModify=>{
+        let obj = newProductModify.find(obj => obj.id === Number(id))
+        let index = newProductModify.indexOf(obj)
+
+        let productModify = {...producto, id}
+        if (!obj) {
+            res.json({msg: "no se encontro el producto"})
+            }else{
+                ProductService.update(productModify, index)
+                res.json("Producto modificado con exito")
+            }
+        })
 })
 
 productosRouter.delete('/:id', soloAdmins, async (req, res) => {

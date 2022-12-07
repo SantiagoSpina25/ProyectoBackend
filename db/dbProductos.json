@@ -1,1 +1,26 @@
-[{"name":"Bruja Escarlata - Doctor Strange en el Multiverso de la Locura","price":12.7,"thumbnail":"https://www.popking.es/wp-content/uploads/2022/03/funko-pop-bruja-escarlata-doctor-strange-en-el-multiverso-de-la-locura.jpg","category":"Marvel","stock":10,"id":1},{"name":"Michael Jordan (All Star 1988)","price":12.9,"thumbnail":"https://www.popking.es/wp-content/uploads/2022/02/funko-pop-michael-jordan-all-star-1988-nba.jpg","category":"NBA","stock":9,"id":2},{"name":"Chewbacca con Porg","price":12.9,"thumbnail":"https://www.popking.es/wp-content/uploads/2020/09/pop-star-wars-chewbacca-con-porg.jpg","category":"Star Wars","stock":11,"id":3}]
+[
+  {
+    "name": "Bruja Escarlata - Doctor Strange en el Multiverso de la Locura",
+    "price": 14.5,
+    "thumbnail": "https://www.popking.es/wp-content/uploads/2022/03/funko-pop-bruja-escarlata-doctor-strange-en-el-multiverso-de-la-locura.jpg",
+    "category": "Marvel",
+    "stock": 10,
+    "id": 1
+  },
+  {
+    "name": "Michael Jordan (All Star 1988)",
+    "price": 12.9,
+    "thumbnail": "https://www.popking.es/wp-content/uploads/2022/02/funko-pop-michael-jordan-all-star-1988-nba.jpg",
+    "category": "NBA",
+    "stock": 9,
+    "id": 2
+  },
+  {
+    "name": "Chewbacca con Porg",
+    "price": 12.9,
+    "thumbnail": "https://www.popking.es/wp-content/uploads/2020/09/pop-star-wars-chewbacca-con-porg.jpg",
+    "category": "Star Wars",
+    "stock": 11,
+    "id": 3
+  }
+]
